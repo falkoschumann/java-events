@@ -1,3 +1,5 @@
+[![Build Status](https://travis-ci.org/falkoschumann/java-events.svg?branch=master)](https://travis-ci.org/falkoschumann/java-events)
+
 Events
 ======
 
