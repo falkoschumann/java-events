@@ -6,7 +6,7 @@
 
     <groupId>de.muspellheim</groupId>
     <artifactId>events</artifactId>
-    <version>1.0.0-SNAPSHOT</version>
+    <version>1.0.0</version>
     <dependencies>
         <dependency>
             <groupId>junit</groupId>
@@ -36,5 +36,13 @@
             </plugins>
         </pluginManagement>
     </build>
+
+    <distributionManagement>
+        <repository>
+            <id>bintray-falkoschumann-maven</id>
+            <name>falkoschumann-maven</name>
+            <url>https://api.bintray.com/maven/falkoschumann/maven/events/;publish=1</url>
+        </repository>
+    </distributionManagement>
 
 </project>
