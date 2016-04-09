@@ -7,7 +7,7 @@ package de.muspellheim.events;
 
 public class ShorterExample {
 
-    public Event<String> onMessage = new Event<>();
+    public final Event<String> onMessage = new Event<>();
 
     // much more code
 

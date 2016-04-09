@@ -1,4 +1,4 @@
-[![Build Status](https://travis-ci.org/falkoschumann/java-events.svg?branch=master)](https://travis-ci.org/falkoschumann/java-events)
+[![Build Status](https://travis-ci.org/falkoschumann/java-events.svg?branch=develop)](https://travis-ci.org/falkoschumann/java-events)
 [![Build Status](https://api.bintray.com/packages/falkoschumann/maven/events/images/download.svg)](https://bintray.com/falkoschumann/maven/events)
 
 
@@ -41,7 +41,7 @@ An full example POJO can be like ...
 
     public class Example {
 
-        private Event<String> onMessage = new Event<>();
+        private final Event<String> onMessage = new Event<>();
 
         public void addHandler(Consumer<String> handler) {
             onMessage.addHandler(handler);
@@ -63,7 +63,7 @@ Or shorter ...
 
     public class ShorterExample {
 
-        public Event<String> onMessage = new Event<>();
+        public final Event<String> onMessage = new Event<>();
 
         // much more code
 
