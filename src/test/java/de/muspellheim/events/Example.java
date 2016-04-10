@@ -9,7 +9,7 @@ import java.util.function.Consumer;
 
 public class Example {
 
-    private Event<String> onMessage = new Event<>();
+    private final Event<String> onMessage = new Event<>();
 
     public void addHandler(Consumer<String> handler) {
         onMessage.addHandler(handler);

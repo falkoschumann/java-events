@@ -1,0 +1,10 @@
+Changelog for Events
+====================
+
+Version v1.0.0
+--------------
+
+*   Add `Event<T>`
+*   Add `IntEvent`
+*   Add `LongEvent`
+*   Add `DoubleEvent`
