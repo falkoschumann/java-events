@@ -12,7 +12,6 @@ import java.util.function.Consumer;
 
 /**
  * An event send a message to handlers.
- * <p>This class is not synchronized.</p>
  *
  * @param <T> the message type.
  * @author Falko Schumann &lt;falko.schumann@muspellheim.de&gt;

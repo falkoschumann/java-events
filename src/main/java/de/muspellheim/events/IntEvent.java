@@ -12,7 +12,6 @@ import java.util.function.IntConsumer;
 
 /**
  * An event send a integer message to handlers.
- * <p>This class is not synchronized.</p>
  *
  * @author Falko Schumann &lt;falko.schumann@muspellheim.de&gt;
  */

@@ -1,6 +1,12 @@
 Changelog for Events
 ====================
 
+Version v1.0.1
+--------------
+
+*   Fix JavaDoc. The `Event` class _is_ synchronized.
+
+
 Version v1.0.0
 --------------
 
