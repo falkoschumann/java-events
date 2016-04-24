@@ -12,7 +12,6 @@ import java.util.function.DoubleConsumer;
 
 /**
  * An event send a double message to handlers.
- * <p>This class is not synchronized.</p>
  *
  * @author Falko Schumann &lt;falko.schumann@muspellheim.de&gt;
  */
