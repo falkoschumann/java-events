@@ -1,0 +1,5 @@
+-exportcontents: de.muspellheim.events.*
+-sources: true
+
+Bundle-Name: Events
+Bundle-SymbolicName: de.muspellheim.events

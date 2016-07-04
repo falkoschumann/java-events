@@ -1,10 +1,15 @@
 /*
- * Copyright (c) 2016 Falko Schumann <www.muspellheim.de>
- * Released under the terms of the MIT License.
+ * Copyright (c) 2016 Falko Schumann
+ * Released under the terms of the MIT License (MIT).
  */
 
 package de.muspellheim.events;
 
+/**
+ * Shorter example usage.
+ *
+ * @author Falko Schumann
+ */
 public class ShorterExample {
 
     public final Event<String> onMessage = new Event<>();

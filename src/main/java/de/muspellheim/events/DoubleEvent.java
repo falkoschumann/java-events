@@ -1,6 +1,6 @@
 /*
- * Copyright (c) 2016 Falko Schumann <www.muspellheim.de>
- * Released under the terms of the MIT License.
+ * Copyright (c) 2016 Falko Schumann
+ * Released under the terms of the MIT License (MIT).
  */
 
 package de.muspellheim.events;
@@ -13,7 +13,7 @@ import java.util.function.DoubleConsumer;
 /**
  * An event send a double message to handlers.
  *
- * @author Falko Schumann &lt;falko.schumann@muspellheim.de&gt;
+ * @author Falko Schumann
  */
 public class DoubleEvent {
 

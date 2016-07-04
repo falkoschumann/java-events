@@ -1,5 +1,5 @@
 [![Build Status](https://travis-ci.org/falkoschumann/java-events.svg?branch=develop)](https://travis-ci.org/falkoschumann/java-events)
-[![Build Status](https://api.bintray.com/packages/falkoschumann/maven/events/images/download.svg)](https://bintray.com/falkoschumann/maven/events)
+[![Download](https://api.bintray.com/packages/falkoschumann/maven/events/images/download.svg)](https://bintray.com/falkoschumann/maven/events)
 
 
 Events

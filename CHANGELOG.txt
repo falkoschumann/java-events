@@ -1,14 +1,21 @@
 Changelog for Events
 ====================
 
-Version v1.0.1
---------------
+Version 1.1.0 - OSGi bundle
+---------------------------
+
+*   The JAR is also an OSGi bundle.
+*   Update Copyright.
+
+
+Version 1.0.1 - Fix JavaDoc
+---------------------------
 
 *   Fix JavaDoc. The `Event` class _is_ synchronized.
 
 
-Version v1.0.0
---------------
+Version 1.0.0 - First release
+-----------------------------
 
 *   Add `Event<T>`
 *   Add `IntEvent`
