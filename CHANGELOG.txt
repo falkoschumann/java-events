@@ -5,6 +5,7 @@ Version 1.1.0 - OSGi bundle
 ---------------------------
 
 *   The JAR is also an OSGi bundle.
+*   Add `Action` for events without message data.
 *   Update Copyright.
 
 

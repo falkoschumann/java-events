@@ -27,9 +27,11 @@ designed for common use with all plain old Java objects (POJOs).
 Usage
 -----
 
-An event can be every object. The event type is defined by a generic type.
+An event can be every object. The event type is defined by a generic type. An
+action is an event without message.
 
     private Event<String> onMessage;
+    private Action onAction;
 
 An event can also be an primitive type `int`, `long` or `double`.
 
@@ -64,6 +66,7 @@ Or shorter ...
     public class ShorterExample {
 
         public final Event<String> onMessage = new Event<>();
+        public final Action onAction = new Action();
 
         // much more code
 
@@ -71,5 +74,8 @@ Or shorter ...
 
 The shorter way direct call the methods on `Event` and do not delegate.
 
-    EventShortExample example = new EventShortExample();
-    example.onMessage.addHandler(m -> System.out.println(m));
+    ShorterExample example = new ShorterExample();
+    example.onMessage.addHandler(m -> System.out.println("message send: " + m));
+
+    ShorterExample example = new ShorterExample();
+    example.onAction.addHandler(() -> System.out.println("action triggered"));

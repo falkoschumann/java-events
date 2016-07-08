@@ -8,11 +8,11 @@ package de.muspellheim.events;
 import java.util.function.Consumer;
 
 /**
- * Example usage.
+ * Example event usage.
  *
  * @author Falko Schumann
  */
-public class Example {
+public class EventExample {
 
     private final Event<String> onMessage = new Event<>();
 

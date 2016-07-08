@@ -6,18 +6,18 @@
 package de.muspellheim.events;
 
 /**
- * Shorter example usage.
+ * Shorter example event usage.
  *
  * @author Falko Schumann
  */
-public class ShorterExample {
+public class ShorterEventExample {
 
     public final Event<String> onMessage = new Event<>();
 
     // much more code
 
     public static void usage() {
-        ShorterExample example = new ShorterExample();
+        ShorterEventExample example = new ShorterEventExample();
         example.onMessage.addHandler(m -> System.out.println(m));
     }
 
