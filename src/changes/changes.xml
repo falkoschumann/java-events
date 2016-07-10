@@ -22,7 +22,7 @@
             </action>
         </release>
 
-        <release version="0.1.0" date="2016-04-24" description="Fix JavaDoc">
+        <release version="1.0.1" date="2016-04-24" description="Fix JavaDoc">
             <action dev="falkoschumann" type="update">
                 Fix JavaDoc. The `Event` class _is_ synchronized.
             </action>
