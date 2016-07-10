@@ -14,7 +14,7 @@
             <leftColumnClass>span3</leftColumnClass>
             <bodyColumnClass>span9</bodyColumnClass>
             <gitHub>
-                <projectId>falkoschumann/example</projectId>
+                <projectId>falkoschumann/java-events</projectId>
                 <ribbonOrientation>right</ribbonOrientation>
             </gitHub>
         </fluidoSkin>
