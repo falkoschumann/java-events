@@ -6,15 +6,15 @@
     <modelVersion>4.0.0</modelVersion>
 
     <groupId>de.muspellheim</groupId>
-    <artifactId>events</artifactId>
-    <version>1.1.0-SNAPSHOT</version>
+    <artifactId>java-events</artifactId>
+    <version>2.0.0-SNAPSHOT</version>
     <packaging>jar</packaging>
 
     <name>Events</name>
     <description>
         A Java 8 Lambda based event mechanism with simple and short notation.
     </description>
-    <url>https://github.com/falkoschumann/java-${project.artifactId}</url>
+    <url>https://github.com/${github.username}/${project.artifactId}</url>
 
     <licenses>
         <license>
@@ -33,19 +33,19 @@
     </developers>
 
     <scm>
-        <connection>scm:git:https://github.com/falkoschumann/java-${project.artifactId}.git</connection>
-        <developerConnection>scm:git:https://github.com/falkoschumann/java-${project.artifactId}.git</developerConnection>
-        <url>http://github.com/falkoschumann/java-${project.artifactId}</url>
+        <connection>scm:git:https://github.com/${github.username}/${project.artifactId}.git</connection>
+        <developerConnection>${scm.connection}</developerConnection>
+        <url>http://github.com/${github.username}/${project.artifactId}</url>
     </scm>
 
     <issueManagement>
         <system>GitHub</system>
-        <url>https://github.com/falkoschumann/java-${project.artifactId}/issues</url>
+        <url>https://github.com/${github.username}/${project.artifactId}/issues</url>
     </issueManagement>
 
     <ciManagement>
         <system>travis-ci</system>
-        <url>https://travis-ci.org/falkoschumann/java-${project.artifactId}</url>
+        <url>https://travis-ci.org/${github.username}/${project.artifactId}</url>
     </ciManagement>
 
     <properties>
@@ -53,6 +53,8 @@
         <project.reporting.outputEncoding>UTF-8</project.reporting.outputEncoding>
         <maven.compiler.source>1.8</maven.compiler.source>
         <maven.compiler.target>1.8</maven.compiler.target>
+        <github.username>github-user</github.username>
+        <bintray.username>bintray-user</bintray.username>
     </properties>
 
     <dependencies>
@@ -175,6 +177,7 @@
                 <version>3.1.0</version>
                 <executions>
                     <execution>
+                        <id>default-bnd-process</id>
                         <goals>
                             <goal>bnd-process</goal>
                         </goals>
@@ -267,11 +270,6 @@
                     </tagListOptions>
                 </configuration>
             </plugin>
-            <plugin>
-                <groupId>org.codehaus.mojo</groupId>
-                <artifactId>jdepend-maven-plugin</artifactId>
-                <version>2.0</version>
-            </plugin>
         </plugins>
     </reporting>
 
@@ -283,9 +281,9 @@
                     <snapshots>
                         <enabled>false</enabled>
                     </snapshots>
-                    <id>bintray-falkoschumann-maven</id>
+                    <id>bintray-${bintray.username}-maven</id>
                     <name>bintray</name>
-                    <url>http://dl.bintray.com/falkoschumann/maven</url>
+                    <url>http://dl.bintray.com/${bintray.username}/maven</url>
                 </repository>
             </repositories>
             <pluginRepositories>
@@ -293,16 +291,16 @@
                     <snapshots>
                         <enabled>false</enabled>
                     </snapshots>
-                    <id>bintray-falkoschumann-maven</id>
+                    <id>bintray-${bintray.username}-maven</id>
                     <name>bintray-plugins</name>
-                    <url>http://dl.bintray.com/falkoschumann/maven</url>
+                    <url>http://dl.bintray.com/${bintray.username}/maven</url>
                 </pluginRepository>
             </pluginRepositories>
             <distributionManagement>
                 <repository>
-                    <id>bintray-falkoschumann-maven</id>
-                    <name>falkoschumann-maven</name>
-                    <url>https://api.bintray.com/maven/falkoschumann/maven/${project.artifactId}/;publish=1</url>
+                    <id>bintray-${bintray.username}-maven</id>
+                    <name>bintray</name>
+                    <url>https://api.bintray.com/maven/${bintray.username}/maven/${project.artifactId}/;publish=1</url>
                 </repository>
             </distributionManagement>
         </profile>
