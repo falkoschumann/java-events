@@ -11,8 +11,6 @@
 
     <custom>
         <fluidoSkin>
-            <leftColumnClass>span3</leftColumnClass>
-            <bodyColumnClass>span9</bodyColumnClass>
             <gitHub>
                 <projectId>falkoschumann/java-events</projectId>
                 <ribbonOrientation>right</ribbonOrientation>

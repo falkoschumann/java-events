@@ -46,7 +46,7 @@ Or shorter ...
 
     }
 
-The shorter way direct call the methods on `Event` and do not delegate.
+... and direct call the methods on `Event` and `Action` without delegating.
 
     ShorterExample example = new ShorterExample();
     example.onMessage.addHandler(m -> System.out.println("message send: " + m));
