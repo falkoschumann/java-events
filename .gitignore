@@ -1,3 +1,8 @@
+# Gradle
+build/
+.gradle
+gradle.properties
+
 ### OS
 .DS_Store
 
