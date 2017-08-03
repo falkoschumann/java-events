@@ -1,18 +1,23 @@
 /*
- * Copyright (c) 2016 Falko Schumann <www.muspellheim.de>
+ * Copyright (c) 2016 Falko Schumann
  * Released under the terms of the MIT License.
  */
 
 package de.muspellheim.events;
 
-public class ShorterExample {
+/**
+ * Shorter example event usage.
+ *
+ * @author Falko Schumann
+ */
+public class ShorterEventExample {
 
     public final Event<String> onMessage = new Event<>();
 
     // much more code
 
     public static void usage() {
-        ShorterExample example = new ShorterExample();
+        ShorterEventExample example = new ShorterEventExample();
         example.onMessage.addHandler(m -> System.out.println(m));
     }
 

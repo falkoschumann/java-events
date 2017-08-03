@@ -1,15 +1,11 @@
-[![Build Status](https://travis-ci.org/falkoschumann/java-events.svg?branch=develop)](https://travis-ci.org/falkoschumann/java-events)
-[![Build Status](https://api.bintray.com/packages/falkoschumann/maven/events/images/download.svg)](https://bintray.com/falkoschumann/maven/events)
+[![Build Status](https://travis-ci.org/falkoschumann/java-events.svg?branch=master)](https://travis-ci.org/falkoschumann/java-events)
+[![GitHub release](https://img.shields.io/github/release/falkoschumann/java-events.svg)]()
 
 
 Events
 ======
 
 A Java 8 lambda based event mechanism with simple and short notation.
-
-
-Introduction
-------------
 
 The common event mechanism in Java for messaging are event listeners and events.
 This needs a listener interface, an event class and a lot of boiler plate code
@@ -24,18 +20,68 @@ The events in this library are much more easier to use, because there are
 designed for common use with all plain old Java objects (POJOs).
 
 
+Installation
+------------
+
+### Gradle
+
+Add the the repository _jcenter_ to your `build.gradle`
+
+    repositories {
+        jcenter()
+    }
+
+and add the dependency
+
+    compile 'de.muspellheim:events:1.1.0'
+
+
+### Maven
+
+Add the the repository _jcenter_ to your `pom.xml`
+    
+    <repositories>
+        <repository>
+            <snapshots>
+                <enabled>false</enabled>
+            </snapshots>
+            <id>central</id>
+            <name>bintray</name>
+            <url>http://jcenter.bintray.com</url>
+        </repository>
+    </repositories>
+
+and add the dependency
+
+    <dependencies>
+        <dependency>
+            <groupId>de.muspellheim</groupId>
+            <artifactId>events</artifactId>
+            <version>1.1.0</version>
+        </dependency>
+    </dependencies>
+
+
+### Download
+
+You can download JARs with binary, source and JavaDoc from GitHub under
+https://github.com/falkoschumann/java-events/releases.
+
+
 Usage
 -----
 
-An event can be every object. The event type is defined by a generic type.
+An event can be every object. The event type is defined by a generic type. An
+action is an event without message.
 
-    private Event<String> onMessage;
+    Event<String> onMessage;
+    Action onAction;
 
 An event can also be an primitive type `int`, `long` or `double`.
 
-    private IntEvent    onIntMessage;
-    private LongEvent   onLongMessage;
-    private DoubleEvent onDoubleMessage;
+    IntEvent    onIntMessage;
+    LongEvent   onLongMessage;
+    DoubleEvent onDoubleMessage;
 
 An full example POJO can be like ...
 
@@ -64,12 +110,32 @@ Or shorter ...
     public class ShorterExample {
 
         public final Event<String> onMessage = new Event<>();
+        public final Action onAction = new Action();
 
         // much more code
 
     }
 
-The shorter way direct call the methods on `Event` and do not delegate.
+... and direct call the methods on `Event` and `Action` without delegating.
 
-    EventShortExample example = new EventShortExample();
-    example.onMessage.addHandler(m -> System.out.println(m));
+    ShorterExample example = new ShorterExample();
+    example.onMessage.addHandler(m -> System.out.println("message send: " + m));
+
+    ShorterExample example = new ShorterExample();
+    example.onAction.addHandler(() -> System.out.println("action triggered"));
+
+
+Contributing
+------------
+
+### Publish artifacts to Bintray
+
+1.  Create file `gradle.properties` and set properties `bintrayUser` and
+    `bintrayApiKey`.
+2.  Run `./gradlew uploadArchives`.
+3.  Check uploaded files and publish.
+
+### Publish distribution to GitHub
+
+1.  Run `./gradle distZip`.
+2.  Upload created ZIP to GitHub releases.

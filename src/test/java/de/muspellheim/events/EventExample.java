@@ -1,5 +1,5 @@
 /*
- * Copyright (c) 2016 Falko Schumann <www.muspellheim.de>
+ * Copyright (c) 2016 Falko Schumann
  * Released under the terms of the MIT License.
  */
 
@@ -7,7 +7,12 @@ package de.muspellheim.events;
 
 import java.util.function.Consumer;
 
-public class Example {
+/**
+ * Example event usage.
+ *
+ * @author Falko Schumann
+ */
+public class EventExample {
 
     private final Event<String> onMessage = new Event<>();
 

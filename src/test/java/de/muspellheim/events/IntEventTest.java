@@ -1,5 +1,5 @@
 /*
- * Copyright (c) 2016 Falko Schumann <www.muspellheim.de>
+ * Copyright (c) 2016 Falko Schumann
  * Released under the terms of the MIT License.
  */
 
@@ -15,7 +15,7 @@ import static org.junit.Assert.assertNull;
 /**
  * Unit test for integer events.
  *
- * @author Falko Schumann &lt;falko.schumann@muspellheim.de&gt;
+ * @author Falko Schumann
  */
 public class IntEventTest {
 
