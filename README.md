@@ -33,7 +33,7 @@ Add the the repository _jcenter_ to your `build.gradle`
 
 and add the dependency
 
-    compile 'de.muspellheim:events:1.0.1'
+    compile 'de.muspellheim:events:1.1.0'
 
 
 ### Maven
@@ -57,7 +57,7 @@ and add the dependency
         <dependency>
             <groupId>de.muspellheim</groupId>
             <artifactId>events</artifactId>
-            <version>1.0.1</version>
+            <version>1.1.0</version>
         </dependency>
     </dependencies>
 
