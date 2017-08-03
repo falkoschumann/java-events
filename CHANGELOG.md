@@ -8,6 +8,12 @@ and this project adheres to [Semantic Versioning](http://semver.org/spec/v2.0.0.
 
 ## [Unreleased]
 
+## [1.1.0] - 2017-08-03
+
+### Added
+
+*   Library is an OSGi bundle and Eclipse plug-in also.
+
 ### Added
 
 *   The JAR is also an OSGi bundle.
@@ -30,5 +36,6 @@ and this project adheres to [Semantic Versioning](http://semver.org/spec/v2.0.0.
 *   Add `DoubleEvent`.
 
 
-[Unreleased]: https://github.com/falkoschumann/java-eventbus/compare/v1.0.1...HEAD
+[Unreleased]: https://github.com/falkoschumann/java-eventbus/compare/v1.1.0...HEAD
+[1.0.1]: https://github.com/falkoschumann/java-eventbus/compare/v1.0.0...V1.1.0
 [1.0.1]: https://github.com/falkoschumann/java-eventbus/compare/v1.0.0...V1.0.1
