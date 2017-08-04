@@ -36,6 +36,6 @@ and this project adheres to [Semantic Versioning](http://semver.org/spec/v2.0.0.
 *   Add `DoubleEvent`.
 
 
-[Unreleased]: https://github.com/falkoschumann/java-eventbus/compare/v1.1.0...HEAD
-[1.1.0]: https://github.com/falkoschumann/java-eventbus/compare/v1.0.0...v1.1.0
-[1.0.1]: https://github.com/falkoschumann/java-eventbus/compare/v1.0.0...V1.0.1
+[Unreleased]: https://github.com/falkoschumann/java-events/compare/v1.1.0...HEAD
+[1.1.0]: https://github.com/falkoschumann/java-events/compare/v1.0.1...v1.1.0
+[1.0.1]: https://github.com/falkoschumann/java-events/compare/v1.0.0...v1.0.1
