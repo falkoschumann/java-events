@@ -19,6 +19,7 @@ public class ShorterActionExample {
     public static void usage() {
         ShorterActionExample example = new ShorterActionExample();
         example.onAction.addHandler(() -> System.out.println("action triggered"));
+        example.onAction.trigger();
     }
 
 }

@@ -19,6 +19,7 @@ public class ShorterEventExample {
     public static void usage() {
         ShorterEventExample example = new ShorterEventExample();
         example.onMessage.addHandler(m -> System.out.println(m));
+        example.onMessage.send("Hello World");
     }
 
 }

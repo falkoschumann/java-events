@@ -120,9 +120,11 @@ Or shorter ...
 
     ShorterExample example = new ShorterExample();
     example.onMessage.addHandler(m -> System.out.println("message send: " + m));
+    example.onMessage.send("Hello World");
 
     ShorterExample example = new ShorterExample();
     example.onAction.addHandler(() -> System.out.println("action triggered"));
+    example.onAction.trigger();
 
 
 Contributing
