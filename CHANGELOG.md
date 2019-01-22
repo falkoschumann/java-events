@@ -8,6 +8,12 @@ and this project adheres to [Semantic Versioning](http://semver.org/spec/v2.0.0.
 
 ## [Unreleased]
 
+### Changed
+
+*   Upgrade to Java 11.
+*   Upgrade to JUnit 5.
+*   Change FindBugs to SpotBugs.
+
 ## [1.1.0] - 2017-08-03
 
 ### Added

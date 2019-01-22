@@ -5,12 +5,11 @@
 
 package de.muspellheim.events;
 
-import org.junit.Test;
+import org.junit.jupiter.api.*;
 
-import java.util.function.DoubleConsumer;
+import java.util.function.*;
 
-import static org.junit.Assert.assertEquals;
-import static org.junit.Assert.assertNull;
+import static org.junit.jupiter.api.Assertions.*;
 
 /**
  * Unit test for double events.

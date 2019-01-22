@@ -1,21 +1,19 @@
-buildscript {
-    repositories {
-        mavenCentral()
-    }
-    dependencies {
-        classpath 'biz.aQute.bnd:biz.aQute.bnd.gradle:3.4.0'
-    }
+/*
+ * Copyright (c) 2019 Falko Schumann
+ * Released under the terms of the MIT License.
+ */
+
+plugins {
+    id 'java-library'
+    id 'com.github.spotbugs' version '1.6.9'
+//  id "com.jfrog.bintray" version "1.+"
+//  id 'biz.aQute.bnd' version '4.1.0'
 }
 
-apply plugin: 'findbugs'
-apply plugin: 'java'
-apply plugin: 'maven'
-apply plugin: 'biz.aQute.bnd.builder'
-
 group = 'de.muspellheim'
-version = '1.1.0'
+version = '2.0.0'
 
-sourceCompatibility = 1.8
+sourceCompatibility = 11
 compileJava.options.encoding = 'UTF-8'
 
 repositories {
@@ -23,58 +21,21 @@ repositories {
 }
 
 dependencies {
-    testImplementation 'junit:junit:4.12'
+    testImplementation 'org.junit.jupiter:junit-jupiter-api:5.3.2'
+    testRuntimeOnly 'org.junit.jupiter:junit-jupiter-engine:5.3.2'
 }
 
-jar {
-    manifest {
-        attributes('Bundle-Name': project.name[0].toUpperCase() + project.name.substring(1))
-        attributes('Bundle-SymbolicName': project.group + '.' + project.name)
-        attributes('Export-Package': project.group + '.' + project.name + '.*', '-sources': 'true',)
+test {
+    useJUnitPlatform()
+    testLogging {
+        showStackTraces = false
+        exceptionFormat = 'full'
     }
 }
 
-task sourcesJar(type: Jar, dependsOn: classes) {
-    classifier = 'sources'
-    from sourceSets.main.allSource
-}
-
-task javadocJar(type: Jar, dependsOn: javadoc) {
-    classifier = 'javadoc'
-    from javadoc.destinationDir
-}
-
-artifacts {
-    archives sourcesJar
-    archives javadocJar
-}
-
-def bintrayUser = project.hasProperty('bintrayUser') ? project.property('bintrayUser') : System.getenv('BINTRAY_USER')
-def bintrayApiKey = project.hasProperty('bintrayApiKey') ? project.property('bintrayApiKey') : System.getenv('BINTRAY_API_KEY')
-uploadArchives {
-    repositories {
-        mavenDeployer {
-            repository(url: "https://api.bintray.com/maven/falkoschumann/maven/${project.name}/;publish=0") {
-                authentication(userName: bintrayUser, password: bintrayApiKey)
-            }
-        }
-    }
-}
-
-task distZip(type: Zip) {
-    from 'src/dist'
-    from jar.outputs.files
-    from sourcesJar.outputs.files
-    from javadocJar.outputs.files
-    from(projectDir) {
-        include('README.md', 'CHANGELOG.md', 'LICENSE.txt')
-        rename { fileName -> fileName.replace('.md', '.txt') }
-    }
-}
-
-tasks.withType(FindBugs) {
+tasks.withType(com.github.spotbugs.SpotBugsTask) {
     reports {
-        xml.enabled false
-        html.enabled true
+        xml.enabled = false
+        html.enabled = true
     }
 }
