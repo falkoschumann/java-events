@@ -29,7 +29,7 @@ public class ActionTest {
      */
     @Test
     public void testSendingEvents() {
-        Action action = new Action();
+        var action = new Action();
         Thread.currentThread().setUncaughtExceptionHandler((t, e) -> exception = e);
 
         Runnable handler = this::trigger;

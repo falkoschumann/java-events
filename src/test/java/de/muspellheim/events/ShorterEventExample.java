@@ -17,7 +17,7 @@ public class ShorterEventExample {
     // much more code
 
     public static void usage() {
-        ShorterEventExample example = new ShorterEventExample();
+        var example = new ShorterEventExample();
         example.onMessage.addHandler(m -> System.out.println(m));
         example.onMessage.send("Hello World");
     }

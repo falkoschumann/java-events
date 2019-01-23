@@ -31,7 +31,7 @@ public class DoubleEventTest {
      */
     @Test
     public void testSendingEvents() {
-        DoubleEvent event = new DoubleEvent();
+        var event = new DoubleEvent();
         Thread.currentThread().setUncaughtExceptionHandler((t, e) -> exception = e);
 
         DoubleConsumer handler = this::saveMessage;

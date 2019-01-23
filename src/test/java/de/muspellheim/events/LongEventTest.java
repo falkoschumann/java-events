@@ -31,7 +31,7 @@ public class LongEventTest {
      */
     @Test
     public void testSendingEvents() {
-        LongEvent event = new LongEvent();
+        var event = new LongEvent();
         Thread.currentThread().setUncaughtExceptionHandler((t, e) -> exception = e);
 
         LongConsumer handler = this::saveMessage;

@@ -5,7 +5,7 @@
 
 package de.muspellheim.events;
 
-import java.util.function.Consumer;
+import java.util.function.*;
 
 /**
  * Example event usage.
