@@ -31,7 +31,7 @@ public class EventTest {
      */
     @Test
     public void testSendingEvents() {
-        var event = new Event<String>();
+        Event<String> event = new Event<>();
         Thread.currentThread().setUncaughtExceptionHandler((t, e) -> exception = e);
 
         Consumer<String> handler = this::saveMessage;

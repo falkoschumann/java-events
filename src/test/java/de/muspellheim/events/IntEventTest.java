@@ -31,7 +31,7 @@ public class IntEventTest {
      */
     @Test
     public void testSendingEvents() {
-        var event = new IntEvent();
+        IntEvent event = new IntEvent();
         Thread.currentThread().setUncaughtExceptionHandler((t, e) -> exception = e);
 
         IntConsumer handler = this::saveMessage;

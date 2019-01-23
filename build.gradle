@@ -13,7 +13,8 @@ plugins {
 group = 'de.muspellheim'
 version = '2.0.0'
 
-sourceCompatibility = 11
+sourceCompatibility = 8
+targetCompatibility = 8
 compileJava.options.encoding = 'UTF-8'
 
 repositories {
