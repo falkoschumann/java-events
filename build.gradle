@@ -6,12 +6,12 @@
 plugins {
     id 'java-library'
     id 'com.github.spotbugs' version '1.6.9'
+    id 'biz.aQute.bnd.builder' version '4.1.0'
 //  id 'com.jfrog.bintray' version '1.+'
-//  id 'biz.aQute.bnd' version '4.1.0'
 }
 
 group = 'de.muspellheim'
-version = '2.0.0'
+version = '1.2.0'
 
 sourceCompatibility = 8
 targetCompatibility = 8
@@ -31,6 +31,18 @@ test {
     testLogging {
         showStackTraces = false
         exceptionFormat = 'full'
+    }
+}
+
+jar {
+    manifest {
+        def basePackage = project.group + '.' + project.name
+        attributes(
+                'Bundle-Name': project.name[0].toUpperCase() + project.name.substring(1),
+                'Bundle-SymbolicName': basePackage,
+                'Export-Package': basePackage + '.*',
+                '-sources': 'true'
+        )
     }
 }
 
